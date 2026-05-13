@@ -35,14 +35,63 @@ body {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    padding: 20px;
+    padding: 40px 20px;
     line-height: 1.6;
 }
 
 #textbox {
     width: 50%;
-    height: 300px;
+    height: 225px;
     resize: vertical;
+    background-color: #303338;
+    color: #ffffff;
+    border: 2px solid #adadad;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    line-height: 1.6;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#textbox:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(180, 180, 180, 0.25);
+}
+
+#wordcountbox {
+    background-color: transparent;    
+    border: none;
+    color: #c5c5c5;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 110px;
+    outline: none;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#resetbtn {
+    background-color: #374151;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+#resetbtn:hover {
+    background-color: #4b5563; 
+}
+
+#resetbtn:active {
+    transform: scale(0.97); 
 }
 
 footer {
@@ -75,4 +124,8 @@ footer {
     height: 32px;
     width: 32px;
     margin-top: 5px;
+}
+
+#footerIMG:hover, #footerIMG2:hover {
+    filter: invert(1) opacity(1);
 }

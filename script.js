@@ -1,6 +1,9 @@
 /** @type {HTMLInputElement} */
 const textbox = document.getElementById("textbox");
 const wordcount = document.getElementById("wordcountbox");
+const resetbtn = document.getElementById("resetbtn");
+
+wordcount.value = "0 words";
 
 let s;
 let wc;
@@ -25,4 +28,9 @@ textbox.addEventListener('input', () =>{
     wordcount.value = wc + " words"
 
     console.log(wordArray)
+})
+
+resetbtn.addEventListener('click', () => {
+    textbox.value = ""
+    wordcount.value = "0 words"
 })
